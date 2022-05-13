@@ -499,7 +499,7 @@ li {
     overflow: hidden;  
 }
 
-/*________________Preloader_______________ */
+/*________________Preloader
 .preloader{ 
     position:fixed; 
     left:0px; 
@@ -513,6 +513,7 @@ li {
     background-image:url(../images/icon/preloader.gif);
 }
 
+_______________ */
 
 /* Update header Style */
 @keyframes menu_sticky {
