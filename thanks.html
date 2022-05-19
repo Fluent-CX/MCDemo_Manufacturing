@@ -1,14 +1,21 @@
 %%[
 
- var @createLead
-  set @createLead = CreateSalesforceObject(
-        "Lead", 3,
-        "LastName", RequestParameter("Last_Name"),
-        "Email", RequestParameter("email"),
-        "LeadSource", RequestParameter("LeadSource")
- ) 
+var @Id, @industry
+set @Id = RequestParameter("subscriberkey")
+set @company = RequestParameter("company")
+set @telephone = RequestParameter("telephone")
+set @city = RequestParameter("city")
 
- ]%%
+
+  var @updateRecord
+  set @updateRecord = UpdateSingleSalesforceObject(
+      "Lead", @Id,
+      "Company", @company,
+      "Phone", @telephone,
+      "City", @city
+     )
+
+]%%
 
 
 
@@ -209,7 +216,7 @@
                     <h2>Download your whitepaper</h2>
                     <p>Thanks for your interest. Click below to download your whitepaper!</p>
                     
-                    
+
                     <div class="download-box">
                         <div class="icon-holder">
                             <span class="icon-download"></span>   
