@@ -4,7 +4,7 @@
   set @createLead = CreateSalesforceObject(
         "Lead", 3,
         "LastName", RequestParameter("Last_Name"),
-        "Email", RequestParameter("email")
+        "Email", RequestParameter("email"),
         "LeadSource", RequestParameter("LeadSource")
  ) 
 
