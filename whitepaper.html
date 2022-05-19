@@ -2,9 +2,10 @@
 
  var @createLead
   set @createLead = CreateSalesforceObject(
-        "Lead", 2,
+        "Lead", 3,
         "LastName", RequestParameter("Last_Name"),
         "Email", RequestParameter("email")
+        "LeadSource", RequestParameter("LeadSource")
  ) 
 
  ]%%
