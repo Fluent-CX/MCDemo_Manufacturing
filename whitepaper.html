@@ -1,3 +1,17 @@
+%%[
+
+ var @createLead
+  set @createLead = CreateSalesforceObject(
+        "Lead", 2,
+        "LastName", RequestParameter("Last_Name"),
+        "Email", RequestParameter("email")
+ ) 
+
+ ]%%
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +46,8 @@
 
 <body>
 <div class="boxed_wrapper">
+
+
 
 
 
