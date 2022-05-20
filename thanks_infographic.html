@@ -4,23 +4,21 @@ var @id, @company, @telephone, @size, @source
 
 set @Id = RequestParameter("subscriberkey")
 set @company = RequestParameter("company")
-<!--  set @telephone = RequestParameter("telephone")
+set @telephone = RequestParameter("telephone")
 set @size = RequestParameter("size")
-set @source = 'Infographic' -->
+set @source = 'Infographic'
 
 
   var @updateRecord
   set @updateRecord = UpdateSingleSalesforceObject(
       "Lead", @Id,
       "Company", @company,
-   <!--    "Phone", @telephone,
+      "Phone", @telephone,
       "Project_Size__c", @size,
       "LeadSource", @source -->
      )
 
 ]%%
-
-Debug. Basic version_1 <br> Size = %%=v(@size)=%% <br> Source = %%=v(@source)=%% <br> id = %%=v(@Id)=%% <br> company = %%=v(@company)=%% 
 
        
 
