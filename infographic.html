@@ -1,15 +1,6 @@
 %%[
 
-var @Id, @industry
 set @Id = _subscriberkey
-
-
-  var @updateRecord
-  set @industry = RequestParameter("industry")
-  set @updateRecord = UpdateSingleSalesforceObject(
-      "Lead", @Id,
-      "Industry", @industry
-     )
 
 ]%%
 
