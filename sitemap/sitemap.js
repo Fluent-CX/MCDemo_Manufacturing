@@ -64,15 +64,15 @@ SalesforceInteractions.init({
                         We are using SalesforceInteractions.mcis.getValueFromNestedObject() to more easily reference data from the pageDetails
                         object after the value is set when the page matches.
                         */
-                        id: () => SalesforceInteractions.resolvers.fromMeta("mcp-articleId"),
+                        id: () => document.querySelector('meta[name="mcp-articleId"]').content,
                         attributes: {
-                            name: () => SalesforceInteractions.resolvers.fromMeta("mcp-articleName"),
+                            name: () => document.querySelector('meta[name="mcp-articleName"]').content,
                             url: SalesforceInteractions.resolvers.fromCanonical(),
-                            description: () => SalesforceInteractions.resolvers.fromMeta("mcp-articleDescription"),
+                            description: () => document.querySelector('meta[name="mcp-articleDescription"]').content
                         },
                         relatedCatalogObjects: { 
-                            Category: [SalesforceInteractions.resolvers.fromMeta("mcp-articleCategory")],
-                            itemClass: [SalesforceInteractions.resolvers.fromMeta("mcp-articleSubject")]
+                            Category: () => [document.querySelector('meta[name="mcp-articleCategory"]').content],
+                            itemClass: () => [document.querySelector('meta[name="mcp-articleSubject"]').content]
                         }
                     }
                 },
